@@ -31,13 +31,13 @@ class ConstructionCostCalculator{
 		AutomatedAndHighStandardMaterialConstructionCost ahsm=new AutomatedAndHighStandardMaterialConstructionCost();
 		Scanner obj=new Scanner(System.in);
 		System.out.println("Enter your choice");
-		choice=obj.nextLine();
+		choice=obj.nextLine().toLowerCase();
 		System.out.println("Total Area Of House");
 		ar=obj.nextDouble();
 		System.out.println("Do you want fully automated or not?Enter y/n");
 		automated=obj.next().charAt(0);
 		switch(choice){
-			case "Standard Material":
+			case "standard material":
 				if(automated=='n'){
 					constructioncost=sm.standardConstructionCost(choice,ar,automated);
 					System.out.println("Construction Cost= " +constructioncost+" INR");
@@ -47,7 +47,7 @@ class ConstructionCostCalculator{
 					System.out.println("Fully Automated not applicable");
 					break;
 				}
-			case "Above Standard Material":
+			case "above standard material":
 				if(automated=='n'){
 					constructioncost=asm.aboveStandardConstructionCost(choice,ar,automated);
 					System.out.println("Construction Cost= " +constructioncost+" INR");
@@ -57,7 +57,7 @@ class ConstructionCostCalculator{
 					System.out.println("Fully Automated not applicable");
 					break;
 				}
-			case "High Standard Material":
+			case "high standard material":
 				if(automated=='n'){
 					constructioncost=hsm.highStandardConstructionCost(choice,ar,automated);
 					System.out.println("Construction Cost= " +constructioncost+" INR");
@@ -67,7 +67,7 @@ class ConstructionCostCalculator{
 					System.out.println("Fully Automated not applicable");
 					break;
 				}
-			case "Automated And High Standard Material":
+			case "automated and high standard material":
 				if(automated=='y'){
 					constructioncost=ahsm.automatedAndHighStandardConstructionCost(choice,ar,automated);
 					System.out.println("Fully automated applicable \nConstruction Cost= "+constructioncost+" INR");
