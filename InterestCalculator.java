@@ -8,7 +8,8 @@ class SimpleInterestCalculator implements SimpleInterest{
 }
 class CompoundInterestCalculator implements CompoundInterest{
 	public double calculateCompoundInterest(double p,double r,int n,int t){
-		double k=(1+(r/n));
+		double i=(r/100);
+		double k=(1+(i/n));
 		return (p*(Math.pow(k,(n*t))));
 	}
 }
